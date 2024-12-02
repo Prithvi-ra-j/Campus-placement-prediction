@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Prediction Form</title>
+</head>
+<body>
+    <h1>Placement Prediction</h1>
+    <form action="/predict" method="POST">
+        <label for="ssc_p">SSC Percentage:</label>
+        <input type="number" step="0.01" name="ssc_p" required><br>
+
+        <label for="hsc_p">HSC Percentage:</label>
+        <input type="number" step="0.01" name="hsc_p" required><br>
+
+        <label for="degree_p">Degree Percentage:</label>
+        <input type="number" step="0.01" name="degree_p" required><br>
+
+        <label for="etest_p">E-Test Percentage:</label>
+        <input type="number" step="0.01" name="etest_p" required><br>
+
+        <label for="hsc_s">HSC Specialization:</label>
+        <select name="hsc_s" required>
+            <option value="Arts">Arts</option>
+            <option value="Commerce">Commerce</option>
+            <option value="Science">Science</option>
+        </select><br>
+
+        <label for="degree_t">Degree Type:</label>
+        <select name="degree_t" required>
+            <option value="Comm&Mgmt">Comm&Mgmt</option>
+            <option value="Others">Others</option>
+            <option value="Sci&Tech">Sci&Tech</option>
+        </select><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
